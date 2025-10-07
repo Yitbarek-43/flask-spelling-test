@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spelling Test</title>
+</head>
+<body>
+    <h1>Spelling Test</h1>
+    {% if result %}
+        <h2>{{ result }}</h2>
+    {% endif %}
+    <form method="post">
+        {% for i, word in enumerate(words) %}
+            <label>Word {{ i+1 }}: </label>
+            <input type="text" name="word{{ i }}"><br><br>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
